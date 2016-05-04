@@ -14,14 +14,12 @@ public class AttributeScopeDeserializer implements JsonDeserializer<AttributeSco
     @Override
     public AttributeScope deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context)
             throws JsonParseException {
-//        String scope = json.getAsString();
         String scope = json.getAsJsonObject().get("value").getAsString();
         return AttributeScope.fromScope(scope);
     }
 
     @Override
     public JsonElement serialize(AttributeScope attributeScope, Type type, JsonSerializationContext context) {
-        //        return context.serialize(attributeScope.getScope());
         JsonObject jsonObject = new JsonObject();
         jsonObject.addProperty("value", attributeScope.getScope());
         return jsonObject;
