@@ -22,7 +22,7 @@ public class GsonFoo {
         tr.delimiter = "some text";
 
         GsonBuilder gsonBuilder = new GsonBuilder();
-        gsonBuilder.registerTypeAdapter(AttributeScope.class, new AttributeScopeDeserializer());
+        gsonBuilder.registerTypeAdapter(AttributeScope.class, new AttributeScopeAdapter());
         Gson gson = gsonBuilder.create();
 
         Path pathToFile = Paths.get(FILE_PATH);

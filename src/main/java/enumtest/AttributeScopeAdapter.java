@@ -10,7 +10,7 @@ import com.google.gson.JsonSerializer;
 
 import java.lang.reflect.Type;
 
-public class AttributeScopeDeserializer implements JsonDeserializer<AttributeScope>, JsonSerializer<AttributeScope> {
+public class AttributeScopeAdapter implements JsonDeserializer<AttributeScope>, JsonSerializer<AttributeScope> {
     @Override
     public AttributeScope deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context)
             throws JsonParseException {
